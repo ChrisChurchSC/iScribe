@@ -1,0 +1,127 @@
+.section {
+  background: var(--bg);
+  padding: 100px 60px;
+  position: relative;
+  border-bottom: 1px solid rgba(26, 25, 23, 0.05);
+}
+
+.grid {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+@media (max-width: 860px) {
+  .section {
+    padding: 64px 24px;
+  }
+  .grid {
+    flex-direction: column;
+  }
+  .cardImage {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+.card {
+  flex: 1;
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.cardImage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom right, rgba(0,0,0,0.45) 0%, transparent 45%),
+    linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 50%, transparent 100%);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.cardTop,
+.cardBottom {
+  position: relative;
+  z-index: 1;
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+}
+
+.cardBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tag {
+  font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  padding: 4px 12px;
+  align-self: flex-start;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.body {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+}
+
+.arrow {
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 2px;
+}

@@ -1,0 +1,117 @@
+.section {
+  background: var(--bg);
+  padding: 100px 60px;
+  border-bottom: 1px solid rgba(26, 25, 23, 0.05);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-self: flex-start;
+  font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  color: #0033D8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(0, 51, 216, 0.08);
+  border-radius: 100px;
+  padding: 5px 12px;
+}
+
+.heading {
+  font-size: 56px;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 860px) {
+  .section {
+    padding: 64px 24px;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 34px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.1);
+}
+
+.videoWrap {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 9 / 16;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.cardInfo {
+  padding: 4px 8px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cardName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.cardTitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ink-muted);
+}

@@ -1,0 +1,280 @@
+.section {
+  background: var(--bg);
+  padding: 100px 60px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading {
+  font-size: clamp(48px, 5vw, 80px);
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+  white-space: nowrap;
+}
+
+/* Review card */
+.reviewWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -24px;
+  position: relative;
+  z-index: 2;
+}
+
+.reviewCard {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid rgba(26, 25, 23, 0.08);
+  border-radius: 100px;
+  padding: 10px 20px 10px 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.avatars {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.reviewRight {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.starsRow {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.star {
+  color: #F59E0B;
+}
+
+.ratingLabel {
+  font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+/* Bento grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 12px;
+}
+
+.tile {
+  border-radius: 20px;
+  padding: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+}
+
+.tileA,
+.tileC,
+.tileD,
+.tileE {
+  aspect-ratio: 1 / 1;
+}
+
+/* Tile A — top left, blue stat */
+.tileA {
+  grid-area: 1 / 1 / 2 / 2;
+  background: #0033D8;
+  justify-content: flex-end;
+}
+
+/* Tile B — center tall, spans both rows */
+.tileB {
+  grid-area: 1 / 2 / 3 / 3;
+  background: #1A1917;
+  justify-content: flex-end;
+  gap: 12px;
+  position: relative;
+}
+
+.tileBPhone {
+  position: absolute;
+  top: -2%;
+  left: 47%;
+  transform: translateX(-50%);
+  height: 72%;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.tileBText {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tile C — top right, light stat */
+.tileC {
+  grid-area: 1 / 3 / 2 / 4;
+  background: #fff;
+  border: 1px solid rgba(26, 25, 23, 0.07);
+  justify-content: flex-end;
+}
+
+/* Tile D — bottom left, compliance */
+.tileD {
+  grid-area: 2 / 1 / 3 / 2;
+  background: #fff;
+  border: 1px solid rgba(26, 25, 23, 0.07);
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* Tile E — bottom right, integrations */
+.tileE {
+  grid-area: 2 / 3 / 3 / 4;
+  background: #EEF1FB;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* Shared big number */
+.bigNum {
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #fff;
+}
+
+.tileC .bigNum {
+  color: var(--ink);
+}
+
+.bigNumLabel {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.4;
+  margin-top: 8px;
+  max-width: 160px;
+}
+
+.tileC .bigNumLabel {
+  color: var(--ink-muted);
+}
+
+/* Tile B */
+.tileEyebrow {
+  font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.tileBHeading {
+  font-size: 36px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.tileBBody {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+}
+
+/* Tile D */
+.tileDHeading {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.tileDBody {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ink-muted);
+  line-height: 1.55;
+}
+
+/* Tile E */
+.tileEHeading {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.tileEBody {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ink-muted);
+  line-height: 1.55;
+}
+
+@media (max-width: 860px) {
+  .section {
+    padding: 64px 24px;
+  }
+  .heading {
+    white-space: normal;
+    font-size: 44px;
+  }
+  /* stack the bento into a single column */
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+  .tileA,
+  .tileB,
+  .tileC,
+  .tileD,
+  .tileE {
+    grid-area: auto;
+    aspect-ratio: auto;
+  }
+  .tileA,
+  .tileC,
+  .tileD,
+  .tileE {
+    min-height: 220px;
+  }
+  .tileB {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 34px;
+  }
+  .reviewCard {
+    max-width: 100%;
+  }
+}

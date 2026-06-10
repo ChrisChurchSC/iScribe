@@ -1,0 +1,142 @@
+.section {
+  background: var(--bg);
+  padding: 100px 60px;
+  border-bottom: 1px solid rgba(26, 25, 23, 0.05);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  margin-bottom: 56px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  color: #0033D8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(0, 51, 216, 0.08);
+  border-radius: 100px;
+  padding: 5px 12px;
+}
+
+.heading {
+  font-size: 56px;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.sub {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logo {
+  flex: 0 0 calc((100% - 36px) / 4);
+}
+
+@media (max-width: 860px) {
+  .section {
+    padding: 64px 24px;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .logo {
+    flex: 0 0 calc((100% - 12px) / 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 32px;
+  }
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid rgba(26, 25, 23, 0.07);
+  border-radius: 16px;
+  padding: 52px 24px 56px;
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+}
+
+.logo:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 51, 216, 0.25);
+}
+
+.logoMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  transition: transform 0.25s ease;
+}
+
+.logo:hover .logoMark {
+  transform: scale(1.04);
+}
+
+.logoText {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.logoImg {
+  max-height: 80px;
+  max-width: 240px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logoName {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ink-muted);
+  letter-spacing: 0.02em;
+}
+
+.more {
+  background: #EEF1FB;
+  border-color: transparent;
+}
+
+.moreText {
+  font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
+  font-size: 13px;
+  font-weight: 400;
+  color: #0033D8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

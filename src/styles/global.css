@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Inter:wght@300;400;500;600&display=swap');
+
+@font-face {
+  font-family: 'Messina Sans Mono';
+  src: url('/fonts/MessinaSansMonoWebTESTFONT-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('/fonts/MessinaSansWebTESTFONT-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('/fonts/MessinaSansWebTESTFONT-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('/fonts/MessinaSansWebTESTFONT-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+  src: url('/fonts/MessinaSansWebTESTFONT-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #F7F9F8;
+  --ink: #1A1917;
+  --ink-muted: rgba(26, 25, 23, 0.45);
+  --pill-bg: rgba(26, 25, 23, 0.05);
+  --pill-border: rgba(26, 25, 23, 0.1);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Messina Sans', 'Inter', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

@@ -1,0 +1,364 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid transparent;
+  border-radius: 100px;
+  padding: 12px 20px;
+  backdrop-filter: blur(12px);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 20px;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.links > li {
+  position: relative;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6px 12px;
+  border-radius: 100px;
+  transition: color 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+.chevron {
+  transition: transform 0.25s ease;
+  opacity: 0.7;
+}
+
+.hasMenu:hover .chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  padding-top: 14px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.hasMenu:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdownInner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(26, 25, 23, 0.08);
+  border-radius: 16px;
+  padding: 8px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+}
+
+.dropItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.dropItem:hover {
+  background: rgba(0, 51, 216, 0.06);
+}
+
+.dropTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.dropDesc {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ink-muted);
+  line-height: 1.4;
+}
+
+.link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid transparent;
+  border-radius: 100px;
+  padding: 6px 6px 6px 20px;
+  backdrop-filter: blur(12px);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.signIn {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6px 12px;
+  border-radius: 100px;
+  transition: color 0.15s ease;
+  white-space: nowrap;
+}
+
+.signIn:hover {
+  color: #fff;
+}
+
+.bookDemo {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 16px;
+  border-radius: 100px;
+  transition: color 0.15s ease;
+  white-space: nowrap;
+}
+
+.bookDemo:hover {
+  color: #fff;
+}
+
+.getStarted {
+  color: #fff;
+  background: #0033D8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 100px;
+  transition: opacity 0.15s ease;
+  white-space: nowrap;
+}
+
+.getStarted:hover {
+  opacity: 0.88;
+}
+
+/* Scrolled — light background, dark text */
+.scrolled .left {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(26, 25, 23, 0.08);
+}
+
+.scrolled .right {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(26, 25, 23, 0.08);
+}
+
+.scrolled .logo {
+  color: #0033D8;
+}
+
+.scrolled .divider {
+  background: rgba(26, 25, 23, 0.12);
+}
+
+.scrolled .link {
+  color: var(--ink-muted);
+}
+
+.scrolled .link:hover {
+  color: var(--ink);
+  background: rgba(26, 25, 23, 0.05);
+}
+
+.scrolled .signIn,
+.scrolled .bookDemo {
+  color: var(--ink-muted);
+}
+
+.scrolled .signIn:hover,
+.scrolled .bookDemo:hover {
+  color: var(--ink);
+}
+
+/* Hamburger — hidden on desktop */
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.scrolled .hamburger,
+.menuOpen .hamburger {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(26, 25, 23, 0.08);
+  color: var(--ink);
+}
+
+.mobileMenu {
+  display: none;
+}
+
+/* Tablet — tighten the desktop nav */
+@media (max-width: 1040px) {
+  .links {
+    gap: 0;
+  }
+  .link {
+    padding: 6px 9px;
+    font-size: 13px;
+  }
+  .bookDemo {
+    display: none;
+  }
+}
+
+/* Mobile — hamburger menu */
+@media (max-width: 860px) {
+  .nav {
+    padding: 16px 20px;
+  }
+  .divider,
+  .links,
+  .right {
+    display: none;
+  }
+  .left {
+    padding: 12px 18px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 76px;
+    left: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(26, 25, 23, 0.08);
+    border-radius: 24px;
+    padding: 16px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+    animation: menuDrop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .mobileLinks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobileLink {
+    display: block;
+    padding: 14px 12px;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--ink);
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background 0.15s ease;
+  }
+  .mobileLink:hover {
+    background: rgba(0, 51, 216, 0.06);
+  }
+  .mobileCtas {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(26, 25, 23, 0.08);
+  }
+  .mobileSignIn {
+    text-align: center;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    border-radius: 100px;
+    border: 1px solid rgba(26, 25, 23, 0.12);
+  }
+  .mobileGetStarted {
+    text-align: center;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    background: #0033D8;
+    text-decoration: none;
+    border-radius: 100px;
+  }
+}
+
+@keyframes menuDrop {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
