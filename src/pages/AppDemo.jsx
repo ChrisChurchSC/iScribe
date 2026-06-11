@@ -24,6 +24,7 @@ import {
   IconAlertTriangle,
   IconVaccine,
   IconReportMedical,
+  IconDeviceDesktop,
 } from '@tabler/icons-react'
 import styles from './AppDemo.module.css'
 
@@ -130,6 +131,11 @@ export default function AppDemo() {
       <Link to="/" className={styles.exit}>
         <IconChevronLeft size={16} strokeWidth={2} />
         Back to site
+      </Link>
+
+      <Link to="/desktop" className={styles.desktopSwitch}>
+        <IconDeviceDesktop size={16} strokeWidth={1.8} />
+        Desktop version
       </Link>
 
       <div className={styles.phone}>

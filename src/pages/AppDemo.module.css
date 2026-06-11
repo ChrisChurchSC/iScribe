@@ -34,6 +34,30 @@
   background: #fff;
 }
 
+.desktopSwitch {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  text-decoration: none;
+  padding: 8px 14px 8px 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(26, 25, 23, 0.06);
+  border-radius: 100px;
+  transition: color 0.15s ease, background 0.15s ease;
+  z-index: 50;
+}
+
+.desktopSwitch:hover {
+  color: var(--ink);
+  background: #fff;
+}
+
 /* ---------- Phone frame ---------- */
 .phone {
   position: relative;
@@ -1145,6 +1169,9 @@
   }
   .exit {
     background: rgba(255, 255, 255, 0.85);
+  }
+  .desktopSwitch {
+    display: none;
   }
   .phone {
     width: 100vw;
