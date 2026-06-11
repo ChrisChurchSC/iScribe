@@ -193,6 +193,25 @@
   gap: 12px;
 }
 
+.appDemo {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 100px;
+  padding: 6px 14px;
+  margin-right: 4px;
+  transition: background 0.15s ease;
+}
+
+.appDemo:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
 .legalLink {
   font-size: 12px;
   font-weight: 400;

@@ -91,6 +91,7 @@ export default function Footer() {
         style={{ transitionDelay: '250ms' }}
       >
         <div className={styles.legal}>
+          <a href="/app" className={styles.appDemo}>View App Demo</a>
           <a href="#" className={styles.legalLink}>Privacy Policy</a>
           <span className={styles.legalSep}>|</span>
           <a href="#" className={styles.legalLink}>Terms of Use</a>
