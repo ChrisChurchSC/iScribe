@@ -42,7 +42,7 @@
   background: #0B0B0B;
   border-radius: 54px;
   padding: 10px;
-  box-shadow: 0 50px 100px rgba(20, 24, 40, 0.22), 0 0 0 1.5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.6);
 }
 
 .island {

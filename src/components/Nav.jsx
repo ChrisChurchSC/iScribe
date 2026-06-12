@@ -57,15 +57,16 @@ const NAV_LINKS = [
   { label: 'Pricing' },
 ]
 
-export default function Nav() {
-  const [scrolled, setScrolled] = useState(false)
+export default function Nav({ forceSolid = false }) {
+  const [scrolled, setScrolled] = useState(forceSolid)
   const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
+    if (forceSolid) { setScrolled(true); return }
     const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.8)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [forceSolid])
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
