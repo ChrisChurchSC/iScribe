@@ -277,7 +277,7 @@
 }
 
 /* Tile E */
-.ehrDiagram {
+.waveWrap {
   flex: 1;
   min-height: 0;
   width: 100%;
@@ -286,10 +286,20 @@
   justify-content: center;
 }
 
-.ehrSvg {
-  width: 100%;
-  max-width: 290px;
-  height: auto;
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 84px;
+  width: 90%;
+  max-width: 300px;
+}
+.waveform span {
+  flex: 1;
+  min-width: 2px;
+  background: #0033D8;
+  border-radius: 100px;
+  opacity: 0.85;
 }
 
 .tileEHeading {
