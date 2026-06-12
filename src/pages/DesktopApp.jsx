@@ -15,9 +15,9 @@ import {
   IconX,
   IconCamera,
   IconPaperclip,
-  IconDeviceMobile,
 } from '@tabler/icons-react'
 import styles from './DesktopApp.module.css'
+import DemoSwitch from '../components/DemoSwitch'
 
 const Logo = () => (
   <svg width="104" height="14" viewBox="0 0 149 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,10 +124,6 @@ export default function DesktopApp() {
           <Link to="/" className={styles.backLink}>
             <IconChevronLeft size={15} strokeWidth={1.8} />
             Back to site
-          </Link>
-          <Link to="/app" className={styles.mobileLink}>
-            <IconDeviceMobile size={15} strokeWidth={1.8} />
-            Mobile version
           </Link>
           <div className={styles.user}>
             <img className={styles.userAvatar} src={avatar('men/52')} alt="" />
@@ -336,6 +332,7 @@ export default function DesktopApp() {
         </div>
       )}
       </div>
+      <DemoSwitch />
     </div>
   )
 }

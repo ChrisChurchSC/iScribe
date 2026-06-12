@@ -13,8 +13,11 @@ export default function ProductSection() {
           className={`${styles.heading} ${rv}`}
           style={{ transitionDelay: '80ms' }}
         >
-          It writes the notes.<br />You focus on patients.
+          One intuitive interface.<br />One exceptional experience.
         </h2>
+        <p className={`${styles.sub} ${rv}`} style={{ transitionDelay: '140ms' }}>
+          94% of providers adopt iScribe after trial, compared to the industry benchmark of 57% adoption.
+        </p>
       </div>
       <div
         className={`${styles.videoWrap} ${rv}`}

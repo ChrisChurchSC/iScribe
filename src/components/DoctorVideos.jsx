@@ -2,10 +2,10 @@ import { useInView } from '../hooks/useInView'
 import styles from './DoctorVideos.module.css'
 
 const CARDS = [
-  { name: 'Dr. Sarah Chen', title: 'Primary Care, UCSF' },
-  { name: 'Dr. Marcus Williams', title: 'Internal Medicine, Johns Hopkins' },
-  { name: 'Dr. Priya Nair', title: 'Pediatrics, Boston Children\'s' },
-  { name: 'Dr. James Okafor', title: 'Emergency Medicine, Mayo Clinic' },
+  { name: 'Dr. David Williams', title: 'Pennsylvania Health System', img: '/doctors/dr-williams.png' },
+  { name: 'Dr. Robert Alvarez', title: 'Cardiology', img: '/doctors/dr-alvarez.jpg' },
+  { name: 'Dr. Priya Nair', title: 'Family Medicine', img: '/doctors/dr-nair.jpg' },
+  { name: 'Dr. Marcus Bell', title: 'Internal Medicine', img: '/doctors/dr-bell.jpg' },
 ]
 
 export default function DoctorVideos() {
@@ -16,8 +16,11 @@ export default function DoctorVideos() {
       <div className={styles.header}>
         <p className={'reveal' + (visible ? ' visible' : '') + ' ' + styles.eyebrow}>Real physicians. Real results.</p>
         <h2 className={'reveal' + (visible ? ' visible' : '') + ' ' + styles.heading} style={{ transitionDelay: '80ms' }}>
-          Hear it from the doctors.
+          Built with you, and your work, in mind.
         </h2>
+        <p className={'reveal' + (visible ? ' visible' : '') + ' ' + styles.sub} style={{ transitionDelay: '140ms' }}>
+          From reduced pajama time to better patient interactions, hear why these leading physicians rely on iScribe.
+        </p>
       </div>
       <div className={styles.grid}>
         {CARDS.map((card, i) => (
@@ -27,15 +30,11 @@ export default function DoctorVideos() {
             style={{ transitionDelay: `${160 + i * 80}ms` }}
           >
             <div className={styles.videoWrap}>
-              <video
-                className={styles.video}
-                src="/doctor-video.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
+              <img className={styles.video} src={card.img} alt={card.name} loading="lazy" />
               <div className={styles.cardOverlay} />
+              <button className={styles.playBtn} aria-label={`Play ${card.name}'s testimonial`}>
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5l9 5.5-9 5.5V2.5z" /></svg>
+              </button>
             </div>
             <div className={styles.cardInfo}>
               <p className={styles.cardName}>{card.name}</p>

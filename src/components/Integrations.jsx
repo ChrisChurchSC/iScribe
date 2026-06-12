@@ -50,10 +50,10 @@ export default function Integrations() {
       <div className={styles.header}>
         <p className={`${styles.eyebrow} ${rv}`}>Integrations</p>
         <h2 className={`${styles.heading} ${rv}`} style={{ transitionDelay: '80ms' }}>
-          Works with the systems<br />you already use.
+          Your preferred EHR<br />already works with iScribe.
         </h2>
         <p className={`${styles.sub} ${rv}`} style={{ transitionDelay: '140ms' }}>
-          iScribe writes notes straight into your EHR. No new workflows, no copy and paste, no switching tabs.
+          No copy pasting, switching tabs, or losing information.
         </p>
       </div>
       <div className={styles.grid}>

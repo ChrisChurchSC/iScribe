@@ -422,7 +422,7 @@
 
 .badge,
 .badgeNow {
-  font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
+  font-family: 'Messina Sans', sans-serif;
   font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -482,7 +482,7 @@
   padding: 14px 24px;
   background: var(--bg);
   border-bottom: 1px solid rgba(26, 25, 23, 0.06);
-  font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
+  font-family: 'Messina Sans', sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.08em;

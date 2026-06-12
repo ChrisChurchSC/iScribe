@@ -24,9 +24,9 @@ import {
   IconAlertTriangle,
   IconVaccine,
   IconReportMedical,
-  IconDeviceDesktop,
 } from '@tabler/icons-react'
 import styles from './AppDemo.module.css'
+import DemoSwitch from '../components/DemoSwitch'
 
 const SECTIONS = [
   { icon: IconFileText, label: 'Documents', on: true },
@@ -133,10 +133,7 @@ export default function AppDemo() {
         Back to site
       </Link>
 
-      <Link to="/desktop" className={styles.desktopSwitch}>
-        <IconDeviceDesktop size={16} strokeWidth={1.8} />
-        Desktop version
-      </Link>
+      <DemoSwitch />
 
       <div className={styles.phone}>
         <div className={styles.island} />

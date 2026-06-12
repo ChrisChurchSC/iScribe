@@ -1,3 +1,4 @@
+import { IconArrowRight } from '@tabler/icons-react'
 import styles from './Hero.module.css'
 import LogoScroll from './LogoScroll'
 
@@ -17,28 +18,28 @@ export default function Hero() {
 
       <div className={styles.heroContent}>
         <h1 className={styles.headline}>
-          Less charting.<br />More care.
+          Do you trust your scribe<br />with E&amp;M accuracy?
         </h1>
         <p className={styles.subCopy}>
-          iScribe listens to patient visits and writes clinical notes automatically, giving physicians hours back every day to focus on the people who need them most.
+          The best documentation is meaningless without seamless integration every step of the way. iScribe not only captures the clinical narrative in the room, but carries that context through coding, improving efficiency and restoring peace of mind.
         </p>
-        <div className={styles.emailCapture}>
-          <input
-            type="email"
-            placeholder="Enter your work email"
-            className={styles.emailInput}
-          />
-          <button className={styles.emailBtn}>Get Started Free</button>
+        <div className={styles.ctaRow}>
+          <button className={styles.ctaPrimary}>
+            I&apos;m an administrator
+            <IconArrowRight size={17} strokeWidth={1.8} />
+          </button>
+          <button className={styles.ctaSecondary}>
+            I&apos;m a physician
+            <IconArrowRight size={17} strokeWidth={1.8} />
+          </button>
         </div>
       </div>
 
       <LogoScroll />
 
       <div className={styles.statCard}>
-        <p className={styles.statNumber}>2.5 hrs</p>
-        <p className={styles.statLabel}>saved per physician, per day</p>
-        <div className={styles.statDivider} />
-        <p className={styles.statSub}>Doctors spend up to 49% of their time on documentation. iScribe gives it back.</p>
+        <p className={styles.statNumber}>~55%</p>
+        <p className={styles.statLabel}>of E&amp;M visits are accurately documented</p>
       </div>
     </section>
   )

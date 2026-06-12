@@ -26,7 +26,6 @@
 
 .inner {
   display: flex;
-  gap: 64px;
   width: max-content;
   animation: scroll 24s linear infinite;
 }
@@ -38,6 +37,7 @@
   filter: brightness(0) invert(1);
   opacity: 0.5;
   flex-shrink: 0;
+  margin-right: 64px;
 }
 
 @keyframes scroll {

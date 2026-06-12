@@ -28,6 +28,12 @@ export default function UseCases() {
 
   return (
     <section ref={ref} className={styles.section}>
+      <div className={styles.intro + ' reveal' + (visible ? ' visible' : '')}>
+        <h2 className={styles.introHeading}>We meet you where you meet your patients.</h2>
+        <p className={styles.introBody}>
+          iScribe runs quietly in the background capturing questions, answers, and crucial context. Notes are immediately coded and pushed to the billing sheet, with no downtime or delays.
+        </p>
+      </div>
       <div className={styles.grid}>
         {CASES.map((c, i) => (
           <div

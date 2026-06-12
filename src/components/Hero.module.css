@@ -47,11 +47,13 @@
 }
 
 .headline {
-  font-size: 72px;
+  font-family: 'Messina Sans Display', 'Messina Sans', sans-serif;
+  font-size: 60px;
   font-weight: 400;
   color: #fff;
-  line-height: 1.0;
+  line-height: 1.05;
   letter-spacing: -0.02em;
+  white-space: nowrap;
   animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }
 
@@ -64,56 +66,54 @@
   animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
 }
 
-.emailCapture {
+.ctaRow {
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 100px;
-  padding: 6px 6px 6px 20px;
-  gap: 8px;
-  width: 380px;
+  gap: 12px;
+  flex-wrap: wrap;
   animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
 }
 
-.emailInput {
-  flex: 1;
-  background: none;
-  border: none;
-  outline: none;
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: 'Messina Sans', sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  color: #fff;
-  min-width: 0;
-}
-
-.emailInput::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.emailBtn {
-  flex-shrink: 0;
-  background: #0033D8;
-  color: #fff;
-  border: none;
-  font-family: 'Messina Sans', sans-serif;
-  font-size: 13px;
   font-weight: 500;
-  padding: 10px 20px;
+  padding: 13px 22px;
   border-radius: 100px;
   cursor: pointer;
-  transition: opacity 0.15s ease;
   white-space: nowrap;
+  transition: opacity 0.15s ease, background 0.15s ease, border-color 0.15s ease;
 }
 
-.emailBtn:hover {
-  opacity: 0.85;
+.ctaPrimary {
+  background: #0033D8;
+  color: #fff;
+  border: 1px solid #0033D8;
+}
+
+.ctaPrimary:hover {
+  opacity: 0.88;
+}
+
+.ctaSecondary {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ctaSecondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .statCard {
+  font-family: 'Messina Sans Display', 'Messina Sans', sans-serif;
   position: absolute;
   bottom: 140px;
   right: 40px;
@@ -134,26 +134,11 @@
 }
 
 .statLabel {
-  font-size: 10px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.6);
-  margin-top: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.statDivider {
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.15);
-  margin: 10px 0;
-}
-
-.statSub {
   font-size: 11px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 6px;
+  line-height: 1.45;
 }
 
 @media (max-width: 768px) {
@@ -165,18 +150,16 @@
     gap: 16px;
   }
   .headline {
-    font-size: 48px;
+    font-size: 42px;
   }
   .subCopy {
     font-size: 14px;
     max-width: none;
   }
-  .emailCapture {
-    width: 100%;
-  }
-  .emailBtn {
-    padding: 10px 16px;
-    font-size: 12px;
+  .ctaPrimary,
+  .ctaSecondary {
+    padding: 12px 18px;
+    font-size: 13px;
   }
   /* stat card collides with copy on small screens */
   .statCard {
@@ -186,29 +169,15 @@
 
 @media (max-width: 420px) {
   .headline {
-    font-size: 40px;
+    font-size: 32px;
+    white-space: normal;
   }
-  .emailCapture {
-    flex-direction: column;
-    align-items: stretch;
-    background: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: none;
-    padding: 0;
-    gap: 10px;
+  .ctaRow {
+    align-self: stretch;
   }
-  .emailInput {
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 100px;
-    padding: 14px 20px;
-  }
-  .emailBtn {
-    padding: 14px 20px;
-    font-size: 14px;
-    border-radius: 100px;
+  .ctaPrimary,
+  .ctaSecondary {
+    flex: 1;
+    justify-content: center;
   }
 }

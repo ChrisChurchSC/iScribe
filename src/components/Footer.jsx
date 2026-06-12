@@ -50,7 +50,8 @@ export default function Footer() {
           <div className={styles.logo}><Logo /></div>
         </div>
         <div className={styles.ctaRight}>
-          <h2 className={styles.ctaHeading}>Ready to give physicians their time back.</h2>
+          <h2 className={styles.ctaHeading}>“I tell all the physicians I know: you have to try iScribe. Once you try it, everything else will just seem subpar.”</h2>
+          <p className={styles.ctaQuoteBy}>Dr. Richard Madison, Orthopedic Surgeon</p>
           <a href="#" className={styles.ctaBtn}>Book a Demo</a>
         </div>
       </div>

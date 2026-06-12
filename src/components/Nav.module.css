@@ -98,7 +98,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  width: 280px;
+  width: 300px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -110,8 +110,8 @@
 
 .dropItem {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  gap: 12px;
   padding: 10px 12px;
   border-radius: 10px;
   text-decoration: none;
@@ -120,6 +120,30 @@
 
 .dropItem:hover {
   background: rgba(0, 51, 216, 0.06);
+}
+
+.dropIcon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: rgba(0, 51, 216, 0.08);
+  color: #0033D8;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dropItem:hover .dropIcon {
+  background: #0033D8;
+  color: #fff;
+}
+
+.dropText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .dropTitle {

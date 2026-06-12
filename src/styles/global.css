@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Inter:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap');
 
+/* Licensed (non-watermarked) Messina Sans — scoped to display headlines */
+@font-face {
+  font-family: 'Messina Sans Display';
+  src: url('/fonts/MessinaSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Messina Sans Mono';
   src: url('/fonts/MessinaSansMonoWebTESTFONT-Regular.woff2') format('woff2');
@@ -8,9 +17,11 @@
   font-display: swap;
 }
 
+/* Licensed Messina Sans. Only Light (300) and Regular (400) are supplied,
+   so 500/600 map to Regular until heavier weights are licensed. */
 @font-face {
   font-family: 'Messina Sans';
-  src: url('/fonts/MessinaSansWebTESTFONT-Light.woff2') format('woff2');
+  src: url('/fonts/MessinaSans-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -18,24 +29,9 @@
 
 @font-face {
   font-family: 'Messina Sans';
-  src: url('/fonts/MessinaSansWebTESTFONT-Book.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Messina Sans';
-  src: url('/fonts/MessinaSansWebTESTFONT-Regular.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Messina Sans';
-  src: url('/fonts/MessinaSansWebTESTFONT-SemiBold.woff2') format('woff2');
-  font-weight: 600;
+  src: url('/fonts/MessinaSans-Regular.woff') format('woff'),
+       url('/fonts/MessinaSans-Regular.otf') format('opentype');
+  font-weight: 400 600;
   font-style: normal;
   font-display: swap;
 }

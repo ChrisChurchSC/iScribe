@@ -1,0 +1,211 @@
+.window {
+  aspect-ratio: 2872 / 1840;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  overflow: hidden;
+  font-family: 'Messina Sans', sans-serif;
+  text-align: left;
+}
+
+.chrome {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 16px;
+  background: #fff;
+  border-bottom: 1px solid rgba(26, 25, 23, 0.06);
+}
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.red { background: #FF5F57; }
+.yellow { background: #FEBC2E; }
+.green { background: #28C840; }
+.chromeTitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.body {
+  position: relative;
+  flex: 1;
+  padding: 44px 56px 56px;
+  background: radial-gradient(circle at 80% 16%, #EEF1FB 0%, #fff 46%);
+}
+
+.eyebrow {
+  font-family: 'Messina Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0033D8;
+}
+.welcome {
+  font-size: 34px;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-top: 10px;
+}
+.sub {
+  font-size: 16px;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  max-width: 460px;
+  margin-top: 12px;
+}
+
+/* ---------- chat ---------- */
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 540px;
+  margin-top: 30px;
+}
+.msg {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.msgMe {
+  justify-content: flex-end;
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.bubble {
+  background: #F1F3F7;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.45;
+  padding: 11px 16px;
+  border-radius: 16px;
+  border-bottom-left-radius: 5px;
+  max-width: 78%;
+}
+.bubbleMe {
+  background: #0033D8;
+  color: #fff;
+  border-radius: 16px;
+  border-bottom-right-radius: 5px;
+}
+.name {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  margin-bottom: 3px;
+}
+.typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 14px 16px;
+}
+.typing span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9aa0ad;
+  animation: blink 1.2s infinite ease-in-out;
+}
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink {
+  0%, 60%, 100% { opacity: 0.3; }
+  30% { opacity: 1; }
+}
+
+.inputBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 540px;
+  margin-top: 18px;
+  background: #fff;
+  border: 1px solid rgba(26, 25, 23, 0.1);
+  border-radius: 100px;
+  padding: 7px 7px 7px 18px;
+}
+.inputText {
+  flex: 1;
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+.attach {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-muted);
+}
+.send {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0033D8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ---------- floating team card ---------- */
+.team {
+  position: absolute;
+  right: 56px;
+  top: 150px;
+  width: 210px;
+  background: #fff;
+  border: 1px solid rgba(26, 25, 23, 0.07);
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 18px 44px rgba(20, 24, 40, 0.16);
+}
+.avatars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.teamAv {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  margin-left: -10px;
+}
+.teamAv:first-child { margin-left: 0; }
+.teamTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.onlineDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #28C840;
+}
+.teamMeta {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 4px;
+}
