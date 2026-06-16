@@ -90,9 +90,10 @@
 }
 
 .ctaPrimary {
-  background: #0033D8;
+  background: #D93025;
   color: #fff;
-  border: 1px solid #0033D8;
+  border: 1px solid #D93025;
+  border-radius: 0;
 }
 
 .ctaPrimary:hover {

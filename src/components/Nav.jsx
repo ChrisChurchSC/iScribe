@@ -58,45 +58,45 @@ export default function Nav({ forceSolid = false }) {
 
   return (
     <nav className={styles.nav + (scrolled ? ' ' + styles.scrolled : '') + (mobileOpen ? ' ' + styles.menuOpen : '')}>
-      <div className={styles.left}>
-        <a href="/" className={styles.logo} aria-label="iScribe Health">
-          <Logo width={132} />
-        </a>
-        <div className={styles.divider} />
-        <ul className={styles.links}>
-          {NAV_LINKS.map(item => (
-            <li key={item.label} className={item.menu ? styles.hasMenu : undefined}>
-              <a href="#" className={styles.link}>
-                {item.label}
-                {item.menu && <IconChevronDown size={14} strokeWidth={2} className={styles.chevron} />}
-              </a>
-              {item.menu && (
-                <div className={styles.dropdown}>
-                  <div className={styles.dropdownInner}>
-                    {item.menu.map(m => {
-                      const Icon = m.icon
-                      return (
-                        <a key={m.title} href="#" className={styles.dropItem}>
-                          <span className={styles.dropIcon}>{Icon && <Icon size={18} strokeWidth={1.7} />}</span>
-                          <span className={styles.dropText}>
-                            <span className={styles.dropTitle}>{m.title}</span>
-                            <span className={styles.dropDesc}>{m.desc}</span>
-                          </span>
-                        </a>
-                      )
-                    })}
-                  </div>
+      <a href="/" className={styles.logo} aria-label="iScribe Health">
+        <Logo width={132} />
+      </a>
+
+      <ul className={styles.links}>
+        {NAV_LINKS.map(item => (
+          <li key={item.label} className={item.menu ? styles.hasMenu : undefined}>
+            <a href="#" className={styles.link}>
+              {item.label}
+              {item.menu && <IconChevronDown size={14} strokeWidth={2} className={styles.chevron} />}
+            </a>
+            {item.menu && (
+              <div className={styles.dropdown}>
+                <div className={styles.dropdownInner}>
+                  {item.menu.map(m => {
+                    const Icon = m.icon
+                    return (
+                      <a key={m.title} href="#" className={styles.dropItem}>
+                        <span className={styles.dropIcon}>{Icon && <Icon size={18} strokeWidth={1.7} />}</span>
+                        <span className={styles.dropText}>
+                          <span className={styles.dropTitle}>{m.title}</span>
+                          <span className={styles.dropDesc}>{m.desc}</span>
+                        </span>
+                      </a>
+                    )
+                  })}
                 </div>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
 
       <div className={styles.right}>
-        <a href="#" className={styles.signIn}>Sign In</a>
-        <a href="#" className={styles.bookDemo}>Book a Demo</a>
-        <a href="#" className={styles.getStarted}>Get Started</a>
+        <a href="#" className={styles.login}>
+          Login
+          <IconChevronDown size={14} strokeWidth={2} className={styles.loginChevron} />
+        </a>
+        <a href="#" className={styles.requestDemo}>Request a Demo</a>
       </div>
 
       <button
@@ -117,8 +117,8 @@ export default function Nav({ forceSolid = false }) {
             ))}
           </ul>
           <div className={styles.mobileCtas}>
-            <a href="#" className={styles.mobileSignIn} onClick={() => setMobileOpen(false)}>Sign In</a>
-            <a href="#" className={styles.mobileGetStarted} onClick={() => setMobileOpen(false)}>Get Started</a>
+            <a href="#" className={styles.mobileSignIn} onClick={() => setMobileOpen(false)}>Login</a>
+            <a href="#" className={styles.mobileGetStarted} onClick={() => setMobileOpen(false)}>Request a Demo</a>
           </div>
         </div>
       )}
