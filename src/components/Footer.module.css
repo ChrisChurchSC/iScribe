@@ -1,6 +1,6 @@
 .footer {
   background: #0033D8;
-  padding: 100px 60px 56px;
+  padding: 64px 60px 40px;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -16,7 +16,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 60px;
-  padding-bottom: 80px;
+  padding-bottom: 44px;
 }
 
 .ctaLeft {
@@ -77,7 +77,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 60px;
-  padding: 64px 0;
+  padding: 44px 0;
 }
 
 .subscribe {
@@ -155,7 +155,7 @@
 .navCol {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
 .colLabel {
@@ -171,11 +171,11 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
 
 .link {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
@@ -191,7 +191,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 36px;
+  padding-top: 24px;
 }
 
 .legal {

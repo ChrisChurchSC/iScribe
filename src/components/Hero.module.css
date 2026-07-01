@@ -93,7 +93,6 @@
   background: #D93025;
   color: #fff;
   border: 1px solid #D93025;
-  border-radius: 0;
 }
 
 .ctaPrimary:hover {
@@ -118,7 +117,7 @@
   position: absolute;
   bottom: 140px;
   right: 40px;
-  width: 200px;
+  width: 240px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(16px);
   border-radius: 12px;
@@ -135,7 +134,7 @@
 }
 
 .statLabel {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.65);
   margin-top: 6px;

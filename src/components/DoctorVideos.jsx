@@ -1,5 +1,11 @@
+import { useState } from 'react'
 import { useInView } from '../hooks/useInView'
 import styles from './DoctorVideos.module.css'
+
+const VIDEOS = [
+  'https://cdn.sanity.io/files/t4ez5tge/production/a6d3643add391b4ec58da094231c0224bf94e580.mp4',
+  'https://cdn.sanity.io/files/t4ez5tge/production/bad018da6c34588804c6e8c41ad203f4d9d1530c.mp4',
+]
 
 const CARDS = [
   { name: 'Dr. David Williams', title: 'Pennsylvania Health System', img: '/doctors/dr-williams.png' },
@@ -10,6 +16,7 @@ const CARDS = [
 
 export default function DoctorVideos() {
   const [ref, visible] = useInView(0.08)
+  const [videoIndex, setVideoIndex] = useState(0)
 
   return (
     <section ref={ref} className={styles.section}>
@@ -22,23 +29,26 @@ export default function DoctorVideos() {
           From reduced pajama time to better patient interactions, hear why these leading physicians rely on iScribe.
         </p>
       </div>
-      <div className={styles.grid}>
-        {CARDS.map((card, i) => (
+      <div className={styles.grid + ' ' + styles.gridSingle}>
+        {/* Showing only the second card full-width for now; restore `CARDS` to show all */}
+        {CARDS.slice(1, 2).map((card, i) => (
           <div
             key={i}
             className={'reveal' + (visible ? ' visible' : '') + ' ' + styles.card}
             style={{ transitionDelay: `${160 + i * 80}ms` }}
           >
             <div className={styles.videoWrap}>
-              <img className={styles.video} src={card.img} alt={card.name} loading="lazy" />
-              <div className={styles.cardOverlay} />
-              <button className={styles.playBtn} aria-label={`Play ${card.name}'s testimonial`}>
-                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5l9 5.5-9 5.5V2.5z" /></svg>
-              </button>
-            </div>
-            <div className={styles.cardInfo}>
-              <p className={styles.cardName}>{card.name}</p>
-              <p className={styles.cardTitle}>{card.title}</p>
+              <video
+                key={videoIndex}
+                className={styles.video}
+                src={VIDEOS[videoIndex]}
+                autoPlay
+                muted
+                playsInline
+                preload="auto"
+                onEnded={() => setVideoIndex(i => (i + 1) % VIDEOS.length)}
+              />
+              <a href="#" className={styles.exploreBtn}>Explore Case Studies</a>
             </div>
           </div>
         ))}

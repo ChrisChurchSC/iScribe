@@ -1,43 +1,23 @@
 import { useState, useEffect } from 'react'
 import {
   IconChevronDown, IconMenu2, IconX,
-  IconMicrophone, IconPlugConnected, IconFileText, IconShieldLock,
-  IconStethoscope, IconVideo, IconBuildingHospital, IconAmbulance,
-  IconUser, IconBuildingCommunity, IconUsersGroup,
+  IconMail, IconNews, IconMicrophone,
 } from '@tabler/icons-react'
 import Logo from './Logo'
 import styles from './Nav.module.css'
 
 const NAV_LINKS = [
+  { label: 'Premium' },
+  { label: 'Flex' },
+  { label: 'Case Studies' },
   {
-    label: 'Product',
+    label: 'Resources',
     menu: [
-      { title: 'Ambient Scribe', desc: 'AI notes from every visit', icon: IconMicrophone },
-      { title: 'EHR Integration', desc: 'Syncs with Epic, Cerner & more', icon: IconPlugConnected },
-      { title: 'Smart Templates', desc: 'Notes in your preferred format', icon: IconFileText },
-      { title: 'Security', desc: 'HIPAA compliant, SOC 2 certified', icon: IconShieldLock },
+      { title: 'Contact', desc: 'Get in touch with our team', icon: IconMail },
+      { title: 'News', desc: 'Latest updates and announcements', icon: IconNews },
+      { title: 'Podcast', desc: 'Conversations from the field', icon: IconMicrophone },
     ],
   },
-  {
-    label: 'Use Cases',
-    menu: [
-      { title: 'Outpatient', desc: 'SOAP notes before the patient leaves', icon: IconStethoscope },
-      { title: 'Telehealth', desc: 'Notes ready the moment the call ends', icon: IconVideo },
-      { title: 'Inpatient', desc: 'Filed before you leave the floor', icon: IconBuildingHospital },
-      { title: 'Emergency', desc: 'Keep pace in high-volume settings', icon: IconAmbulance },
-    ],
-  },
-  {
-    label: 'Solutions',
-    menu: [
-      { title: 'For Physicians', desc: 'Win back hours every day', icon: IconUser },
-      { title: 'For Health Systems', desc: 'Scale across every department', icon: IconBuildingCommunity },
-      { title: 'For Groups', desc: 'Standardize documentation', icon: IconUsersGroup },
-    ],
-  },
-  { label: 'Resources' },
-  { label: 'Company' },
-  { label: 'Pricing' },
 ]
 
 export default function Nav({ forceSolid = false }) {
@@ -59,7 +39,7 @@ export default function Nav({ forceSolid = false }) {
   return (
     <nav className={styles.nav + (scrolled ? ' ' + styles.scrolled : '') + (mobileOpen ? ' ' + styles.menuOpen : '')}>
       <a href="/" className={styles.logo} aria-label="iScribe Health">
-        <Logo width={132} />
+        <Logo width={80} />
       </a>
 
       <ul className={styles.links}>
@@ -93,10 +73,9 @@ export default function Nav({ forceSolid = false }) {
 
       <div className={styles.right}>
         <a href="#" className={styles.login}>
-          Login
-          <IconChevronDown size={14} strokeWidth={2} className={styles.loginChevron} />
+          Live Chat
         </a>
-        <a href="#" className={styles.requestDemo}>Request a Demo</a>
+        <a href="#" className={styles.requestDemo}>14 Day Free Trial</a>
       </div>
 
       <button
@@ -117,8 +96,8 @@ export default function Nav({ forceSolid = false }) {
             ))}
           </ul>
           <div className={styles.mobileCtas}>
-            <a href="#" className={styles.mobileSignIn} onClick={() => setMobileOpen(false)}>Login</a>
-            <a href="#" className={styles.mobileGetStarted} onClick={() => setMobileOpen(false)}>Request a Demo</a>
+            <a href="#" className={styles.mobileSignIn} onClick={() => setMobileOpen(false)}>Live Chat</a>
+            <a href="#" className={styles.mobileGetStarted} onClick={() => setMobileOpen(false)}>14 Day Free Trial</a>
           </div>
         </div>
       )}

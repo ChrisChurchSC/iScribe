@@ -1,3 +1,4 @@
+import { IconArrowRight } from '@tabler/icons-react'
 import { useInView } from '../hooks/useInView'
 import styles from './ProductSection.module.css'
 
@@ -16,8 +17,12 @@ export default function ProductSection() {
           One intuitive interface.<br />One exceptional experience.
         </h2>
         <p className={`${styles.sub} ${rv}`} style={{ transitionDelay: '140ms' }}>
-          94% of providers adopt iScribe after trial, compared to the industry benchmark of 57% adoption.
+          <strong>92%</strong> of providers adopt iScribe after trial, compared to the industry benchmark of 57% adoption.
         </p>
+        <a href="#" className={styles.cta}>
+          Book a Demo
+          <IconArrowRight size={17} strokeWidth={1.8} />
+        </a>
       </div>
       <div
         className={`${styles.videoWrap} ${rv}`}

@@ -2,20 +2,27 @@
   background: var(--bg);
   padding: 100px 60px;
   border-bottom: 1px solid rgba(26, 25, 23, 0.05);
+  overflow: hidden;
 }
 
 .header {
   display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.headText {
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   gap: 12px;
-  margin-bottom: 48px;
+  max-width: 620px;
 }
 
 .eyebrow {
   display: inline-flex;
-  align-self: center;
+  align-self: flex-start;
   font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
   font-size: 11px;
   font-weight: 400;
@@ -40,84 +47,68 @@
   font-weight: 400;
   color: var(--ink-muted);
   line-height: 1.6;
-  max-width: 580px;
+  max-width: 520px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+/* Prev / next arrows, aligned to the headline */
+.arrows {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  padding-bottom: 4px;
 }
 
-/* Full-width single-card mode */
-.gridSingle {
-  grid-template-columns: 1fr;
-}
-
-.gridSingle .videoWrap {
-  aspect-ratio: 16 / 9;
-}
-
-.exploreBtn {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: inline-flex;
+.arrowBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 100px;
+  border: 1px solid rgba(26, 25, 23, 0.15);
+  background: #fff;
+  color: var(--ink);
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 28px;
-  font-family: 'Messina Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.arrowBtn:hover {
+  background: var(--ink);
   color: #fff;
-  text-decoration: none;
-  white-space: nowrap;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 100px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  opacity: 0;
-  transition: opacity 0.25s ease, background 0.2s ease;
-  pointer-events: none;
+  border-color: var(--ink);
 }
 
-.videoWrap:hover .exploreBtn {
-  opacity: 1;
-  pointer-events: auto;
+/* Full-bleed, draggable carousel track */
+.track {
+  display: flex;
+  gap: 16px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 6px 60px;
+  scroll-padding-left: 60px;
+  overflow-x: auto;
+  cursor: grab;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  mask-image: linear-gradient(to right, #000 0, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, #000 0, #000 92%, transparent 100%);
 }
 
-.exploreBtn:hover {
-  background: rgba(255, 255, 255, 0.22);
+.track::-webkit-scrollbar {
+  display: none;
 }
 
-@media (max-width: 860px) {
-  .section {
-    padding: 64px 24px;
-  }
-  .heading {
-    font-size: 40px;
-  }
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
-    max-width: 360px;
-  }
-}
-
-@media (max-width: 480px) {
-  .heading {
-    font-size: 34px;
-  }
+.track.dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
 }
 
 .card {
+  flex: 0 0 clamp(240px, 22vw, 300px);
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -125,9 +116,7 @@
   border-radius: 20px;
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.35s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
 }
 
 .card:hover {
@@ -204,4 +193,30 @@
   font-size: 12px;
   font-weight: 400;
   color: var(--ink-muted);
+}
+
+@media (max-width: 860px) {
+  .section {
+    padding: 64px 24px;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .arrows {
+    display: none;
+  }
+  .track {
+    padding: 6px 24px;
+    scroll-padding-left: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 34px;
+  }
 }

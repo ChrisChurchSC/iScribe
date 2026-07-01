@@ -1,0 +1,99 @@
+.section {
+  background: var(--bg);
+  padding: 80px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  width: 100%;
+  max-width: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 40px 24px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.item:hover .content {
+  transform: translateY(-18px);
+}
+
+.trialLink {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  background: rgba(26, 25, 23, 0.05);
+  border-radius: 100px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, 6px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.15s ease, background 0.15s ease;
+}
+
+.item:hover .trialLink {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.trialLink:hover {
+  color: #1E6BFF;
+  background: rgba(30, 107, 255, 0.1);
+}
+
+.value {
+  font-family: 'Messina Sans Display', 'Messina Sans', sans-serif;
+  font-size: 52px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink-muted);
+  line-height: 1.5;
+  max-width: 220px;
+}
+
+@media (max-width: 860px) {
+  .section {
+    padding: 56px 24px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 360px;
+  }
+  .value {
+    font-size: 44px;
+  }
+}

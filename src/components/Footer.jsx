@@ -4,20 +4,12 @@ import styles from './Footer.module.css'
 
 const NAV = [
   {
-    label: 'Product',
-    links: ['Features', 'Integrations', 'Security', 'Pricing'],
+    label: 'Explore',
+    links: ['Premium', 'Flex', 'Case Studies'],
   },
   {
-    label: 'Use Cases',
-    links: ['Outpatient', 'Telehealth', 'Inpatient', 'Emergency'],
-  },
-  {
-    label: 'Solutions',
-    links: ['For Physicians', 'For Health Systems', 'For Groups'],
-  },
-  {
-    label: 'Company',
-    links: ['About', 'Blog', 'Press', 'Careers', 'Contact'],
+    label: 'Resources',
+    links: ['Contact', 'News', 'Podcast'],
   },
 ]
 

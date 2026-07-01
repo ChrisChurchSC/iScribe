@@ -38,8 +38,8 @@ export default function Hero() {
       <LogoScroll />
 
       <div className={styles.statCard}>
-        <p className={styles.statNumber}>~55%</p>
-        <p className={styles.statLabel}>of E&amp;M visits are accurately documented</p>
+        <p className={styles.statNumber}>92%</p>
+        <p className={styles.statLabel}>adoption rate after product trial</p>
       </div>
     </section>
   )

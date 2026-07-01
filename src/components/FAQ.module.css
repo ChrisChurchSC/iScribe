@@ -1,5 +1,5 @@
 .section {
-  background: var(--bg);
+  background: #2D4760;
   padding: 100px 60px;
 }
 
@@ -10,7 +10,7 @@
 .heading {
   font-size: 40px;
   font-weight: 400;
-  color: var(--ink);
+  color: #fff;
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
@@ -18,11 +18,11 @@
 .list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid rgba(26, 25, 23, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .item {
-  border-bottom: 1px solid rgba(26, 25, 23, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   overflow: hidden;
 }
 
@@ -37,7 +37,7 @@
   font-family: 'Messina Sans', sans-serif;
   font-size: 22px;
   font-weight: 400;
-  color: var(--ink);
+  color: #fff;
   text-align: left;
   cursor: pointer;
   gap: 24px;
@@ -51,7 +51,7 @@
 
 .icon {
   flex-shrink: 0;
-  color: var(--ink-muted);
+  color: rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -78,7 +78,7 @@
 .answer {
   font-size: 16px;
   font-weight: 400;
-  color: var(--ink-muted);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.7;
   max-width: 760px;
   padding-bottom: 32px;

@@ -7,13 +7,15 @@
 .header {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 16px;
   margin-bottom: 56px;
 }
 
 .eyebrow {
   display: inline-flex;
-  align-self: flex-start;
+  align-self: center;
   font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
   font-size: 11px;
   font-weight: 400;
@@ -37,6 +39,7 @@
 /* ---------- Tabs ---------- */
 .tabs {
   display: flex;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 22px;
   flex-wrap: wrap;
@@ -88,7 +91,8 @@
   line-height: 1.6;
   max-width: 600px;
   min-height: 54px;
-  margin-bottom: 44px;
+  margin: 0 auto 44px;
+  text-align: center;
 }
 
 /* ---------- Desktop app showcase ---------- */

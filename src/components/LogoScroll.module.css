@@ -27,7 +27,7 @@
 .inner {
   display: flex;
   width: max-content;
-  animation: scroll 24s linear infinite;
+  animation: scroll 72s linear infinite;
 }
 
 .logo {

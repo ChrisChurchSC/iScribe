@@ -8,13 +8,25 @@ const LOGOS = [
   { src: '/logos/patientpop.png', alt: 'PatientPop' },
 ]
 
+// Repeat the base set so a single half is wide enough to fill any viewport,
+// keeping the -50% loop seamless (each half is an identical set of logos).
+const HALF = [...LOGOS, ...LOGOS, ...LOGOS]
+
 export default function LogoScroll() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.track}>
         <div className={styles.inner}>
-          {[...LOGOS, ...LOGOS].map((logo, i) => (
-            <img key={i} src={logo.src} alt={logo.alt} className={styles.logo} />
+          {[...HALF, ...HALF].map((logo, i) => (
+            <img
+              key={i}
+              src={logo.src}
+              alt={logo.alt}
+              className={styles.logo}
+              loading="eager"
+              decoding="async"
+              draggable="false"
+            />
           ))}
         </div>
       </div>

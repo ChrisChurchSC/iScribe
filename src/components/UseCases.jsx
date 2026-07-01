@@ -1,4 +1,3 @@
-import { IconArrowRight } from '@tabler/icons-react'
 import { useInView } from '../hooks/useInView'
 import styles from './UseCases.module.css'
 
@@ -29,31 +28,23 @@ export default function UseCases() {
   return (
     <section ref={ref} className={styles.section}>
       <div className={styles.intro + ' reveal' + (visible ? ' visible' : '')}>
-        <h2 className={styles.introHeading}>We meet you where you meet your patients.</h2>
+        <p className={styles.eyebrow}>Every care setting</p>
+        <h2 className={styles.introHeading}>We meet you where you<br />meet your patients.</h2>
         <p className={styles.introBody}>
           iScribe runs quietly in the background capturing questions, answers, and crucial context. Notes are immediately coded and pushed to the billing sheet, with no downtime or delays.
         </p>
       </div>
-      <div className={styles.grid}>
-        {CASES.map((c, i) => (
+      <div className={styles.panels + ' reveal' + (visible ? ' visible' : '')}>
+        {CASES.map((c) => (
           <div
             key={c.tag}
-            className={styles.card + ' reveal' + (visible ? ' visible' : '')}
-            style={{ transitionDelay: `${i * 100}ms` }}
+            className={styles.panel}
+            style={{ backgroundImage: `url(${c.image})` }}
           >
-            <div className={styles.cardImage} style={{ backgroundImage: `url(${c.image})` }}>
-              <div className={styles.cardTop}>
-                <p className={styles.tag}>{c.tag}</p>
-              </div>
-              <div className={styles.cardBottom}>
-                <div className={styles.cardText}>
-                  <p className={styles.title}>{c.title}</p>
-                  <p className={styles.body}>{c.body}</p>
-                </div>
-                <div className={styles.arrow}>
-                  <IconArrowRight size={18} strokeWidth={1.5} />
-                </div>
-              </div>
+            <p className={styles.tag}>{c.tag}</p>
+            <div className={styles.panelDetail}>
+              <p className={styles.title}>{c.title}</p>
+              <p className={styles.body}>{c.body}</p>
             </div>
           </div>
         ))}

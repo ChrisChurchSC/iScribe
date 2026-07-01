@@ -24,7 +24,7 @@ export const AUDIENCES = {
     answer:
       'For healthcare administrators, iScribe is an ambient AI medical scribe that reduces documentation costs and physician burnout while improving revenue capture. It writes notes automatically, codes E&M accurately, integrates with your existing EHR, and rolls out across the practice with dedicated onboarding, giving leadership measurable ROI without disrupting clinical workflows.',
     stats: [
-      { value: '94%', label: 'of providers adopt iScribe after trial' },
+      { value: '92%', label: 'of providers adopt iScribe after trial' },
       { value: '2.5 hrs', label: 'saved per clinician, per day' },
       { value: '95%', label: 'audited E&M coding accuracy' },
     ],
@@ -92,7 +92,7 @@ export const AUDIENCES = {
     faqs: [
       {
         q: 'What is the ROI of an AI medical scribe?',
-        a: 'iScribe drives ROI three ways: it saves clinicians roughly 2.5 hours a day, it recovers revenue through 95% audited E&M coding accuracy, and it reduces scribe and transcription costs. With 94% of providers adopting after trial, the investment is used, not shelved.',
+        a: 'iScribe drives ROI three ways: it saves clinicians roughly 2.5 hours a day, it recovers revenue through 95% audited E&M coding accuracy, and it reduces scribe and transcription costs. With 92% of providers adopting after trial, the investment is used, not shelved.',
       },
       {
         q: 'How does iScribe reduce physician burnout?',
