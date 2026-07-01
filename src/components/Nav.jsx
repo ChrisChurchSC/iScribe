@@ -75,7 +75,7 @@ export default function Nav({ forceSolid = false }) {
         <a href="#" className={styles.login}>
           Live Chat
         </a>
-        <a href="#" className={styles.requestDemo}>14 Day Free Trial</a>
+        <a href="#" className={styles.requestDemo}>Start Your Trial</a>
       </div>
 
       <button
@@ -97,7 +97,7 @@ export default function Nav({ forceSolid = false }) {
           </ul>
           <div className={styles.mobileCtas}>
             <a href="#" className={styles.mobileSignIn} onClick={() => setMobileOpen(false)}>Live Chat</a>
-            <a href="#" className={styles.mobileGetStarted} onClick={() => setMobileOpen(false)}>14 Day Free Trial</a>
+            <a href="#" className={styles.mobileGetStarted} onClick={() => setMobileOpen(false)}>Start Your Trial</a>
           </div>
         </div>
       )}
