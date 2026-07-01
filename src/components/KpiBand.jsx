@@ -3,7 +3,7 @@ import { useInView } from '../hooks/useInView'
 import styles from './KpiBand.module.css'
 
 const KPIS = [
-  { value: '92%', label: 'Adoption rate after trial', link: 'Start 14 day free trial' },
+  { value: '92%', label: 'Adoption rate after personalized 14-day trial', link: 'Start 14 day free trial' },
   { value: '100%', label: 'Customizable for your clinic', link: 'Learn more' },
   { value: '98%', label: 'Note accuracy across specialties', link: 'View accuracy data' },
 ]

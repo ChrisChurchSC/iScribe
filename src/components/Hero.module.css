@@ -48,12 +48,12 @@
 
 .headline {
   font-family: 'Messina Sans Display', 'Messina Sans', sans-serif;
-  font-size: 60px;
+  font-size: 52px;
   font-weight: 400;
   color: #fff;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  white-space: nowrap;
+  max-width: 560px;
   animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }
 
@@ -113,6 +113,7 @@
 }
 
 .statCard {
+  display: none; /* hidden for now */
   font-family: 'Messina Sans Display', 'Messina Sans', sans-serif;
   position: absolute;
   bottom: 140px;

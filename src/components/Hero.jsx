@@ -18,10 +18,10 @@ export default function Hero() {
 
       <div className={styles.heroContent}>
         <h1 className={styles.headline}>
-          Do you trust your scribe<br />with E&amp;M accuracy?
+          Does your AI medical scribe work for you or do you work for it?
         </h1>
         <p className={styles.subCopy}>
-          The best documentation is meaningless without seamless integration every step of the way. iScribe not only captures the clinical narrative in the room, but carries that context through coding, improving efficiency and restoring peace of mind.
+          iScribe Premium is custom-built for you—no compromises, no workarounds—to reflect your vision and preferences. Powered by a dedicated team of support specialists available 24/7, iScribe Premium is a truly bespoke solution for ambient clinical documentation and coding.
         </p>
         <div className={styles.ctaRow}>
           <button className={styles.ctaPrimary}>

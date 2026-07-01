@@ -1,5 +1,4 @@
 import { useRef } from 'react'
-import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react'
 import { useInView } from '../hooks/useInView'
 import styles from './Testimonials.module.css'
 
@@ -38,27 +37,15 @@ export default function Testimonials() {
     trackRef.current?.classList.remove(styles.dragging)
   }
 
-  const scrollBy = (dir) => {
-    trackRef.current?.scrollBy({ left: dir * 316, behavior: 'smooth' })
-  }
-
   return (
     <section ref={ref} className={styles.section}>
       <div className={styles.header + ' reveal' + (visible ? ' visible' : '')}>
         <div className={styles.headText}>
-          <p className={styles.eyebrow}>Testimonials</p>
-          <h2 className={styles.heading}>Hear it from the clinicians.</h2>
+          <p className={styles.eyebrow}>Real physicians. Real results.</p>
+          <h2 className={styles.heading}>Tailored to your needs.<br />Optimized by your support team.</h2>
           <p className={styles.sub}>
-            Thousands of providers have made iScribe part of their day. Scroll through their stories.
+            Hear why these specialists made the switch to iScribe Premium, and learn how they built an experience uniquely their own.
           </p>
-        </div>
-        <div className={styles.arrows}>
-          <button className={styles.arrowBtn} onClick={() => scrollBy(-1)} aria-label="Previous testimonials">
-            <IconChevronLeft size={20} strokeWidth={1.8} />
-          </button>
-          <button className={styles.arrowBtn} onClick={() => scrollBy(1)} aria-label="Next testimonials">
-            <IconChevronRight size={20} strokeWidth={1.8} />
-          </button>
         </div>
       </div>
 

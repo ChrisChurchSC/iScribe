@@ -8,7 +8,7 @@ const STEPS = [
   {
     num: '01',
     title: 'Trial',
-    body: 'Before the trial even begins, we meet to discuss your pain points, opportunities, and how iScribe can help.',
+    body: 'Before the trial even begins, we meet to discuss your pain points, opportunities, and how iScribe Premium can help.',
   },
   {
     num: '02',

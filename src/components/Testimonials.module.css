@@ -1,28 +1,29 @@
 .section {
   background: var(--bg);
-  padding: 100px 60px;
-  border-bottom: 1px solid rgba(26, 25, 23, 0.05);
+  padding: 100px 60px 40px;
   overflow: hidden;
 }
 
 .header {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
   margin-bottom: 40px;
 }
 
 .headText {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
-  max-width: 620px;
+  max-width: none;
 }
 
 .eyebrow {
   display: inline-flex;
-  align-self: flex-start;
+  align-self: center;
   font-family: 'Messina Sans Mono', 'Inconsolata', monospace;
   font-size: 11px;
   font-weight: 400;
@@ -40,6 +41,7 @@
   color: var(--ink);
   letter-spacing: -0.02em;
   line-height: 1.05;
+  white-space: nowrap;
 }
 
 .sub {
@@ -84,7 +86,9 @@
   gap: 16px;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding: 6px 60px;
+  padding: 30px 60px 40px;
+  margin-top: -18px;
+  margin-bottom: -12px;
   scroll-padding-left: 60px;
   overflow-x: auto;
   cursor: grab;
@@ -92,8 +96,6 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
-  mask-image: linear-gradient(to right, #000 0, #000 92%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, #000 0, #000 92%, transparent 100%);
 }
 
 .track::-webkit-scrollbar {
@@ -107,7 +109,7 @@
 }
 
 .card {
-  flex: 0 0 clamp(240px, 22vw, 300px);
+  flex: 0 0 clamp(280px, 24vw, 340px);
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -121,7 +123,7 @@
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
 .videoWrap {
@@ -197,20 +199,19 @@
 
 @media (max-width: 860px) {
   .section {
-    padding: 64px 24px;
+    padding: 64px 24px 24px;
   }
   .heading {
     font-size: 40px;
-  }
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
+    white-space: normal;
   }
   .arrows {
     display: none;
   }
   .track {
-    padding: 6px 24px;
+    padding: 26px 24px 36px;
+    margin-top: -14px;
+    margin-bottom: -10px;
     scroll-padding-left: 24px;
   }
 }

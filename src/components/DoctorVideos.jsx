@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { IconArrowRight } from '@tabler/icons-react'
 import { useInView } from '../hooks/useInView'
 import styles from './DoctorVideos.module.css'
 
@@ -21,13 +22,17 @@ export default function DoctorVideos() {
   return (
     <section ref={ref} className={styles.section}>
       <div className={styles.header}>
-        <p className={'reveal' + (visible ? ' visible' : '') + ' ' + styles.eyebrow}>Real physicians. Real results.</p>
+        <p className={'reveal' + (visible ? ' visible' : '') + ' ' + styles.eyebrow}>Our newest offering</p>
         <h2 className={'reveal' + (visible ? ' visible' : '') + ' ' + styles.heading} style={{ transitionDelay: '80ms' }}>
-          Built with you, and your work, in mind.
+          Introducing iScribe Flex
         </h2>
         <p className={'reveal' + (visible ? ' visible' : '') + ' ' + styles.sub} style={{ transitionDelay: '140ms' }}>
-          From reduced pajama time to better patient interactions, hear why these leading physicians rely on iScribe.
+          Lightweight, cost-effective, with thoughtful customizations and 0 copy pasting.
         </p>
+        <a href="#" className={styles.cta}>
+          Explore iScribe Flex
+          <IconArrowRight size={17} strokeWidth={1.8} />
+        </a>
       </div>
       <div className={styles.grid + ' ' + styles.gridSingle}>
         {/* Showing only the second card full-width for now; restore `CARDS` to show all */}
@@ -48,7 +53,6 @@ export default function DoctorVideos() {
                 preload="auto"
                 onEnded={() => setVideoIndex(i => (i + 1) % VIDEOS.length)}
               />
-              <a href="#" className={styles.exploreBtn}>Explore Case Studies</a>
             </div>
           </div>
         ))}

@@ -17,13 +17,13 @@ export default function Home() {
       <Nav />
       <Hero />
       <KpiBand />
-      <DoctorVideos />
-      <UseCases />
-      <ProductSection />
-      <HowItWorks />
-      <BentoSection />
-      <Integrations />
       <Testimonials />
+      <Integrations />
+      <HowItWorks />
+      {/* <UseCases /> hidden for now */}
+      <ProductSection />
+      {/* <BentoSection /> hidden for now */}
+      <DoctorVideos />
       <FAQ />
       <Footer />
     </>
